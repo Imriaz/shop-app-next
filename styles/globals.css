@@ -2,3 +2,8 @@
   background-color: aqua;
   padding: 10px;
 }
+
+.not-found {
+  text-align: center;
+  padding: 20px 0;
+}
