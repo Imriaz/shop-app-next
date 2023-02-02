@@ -11,7 +11,7 @@ const Navbar = () => {
       <div style={{ display: "flex", gap: "10px" }}>
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
-        <Link href="/User">User List</Link>
+        <Link href="/User/User">User List</Link>
         <Link href="/product-list">Product List</Link>
         <Link href="/Contact">Contact Us</Link>
         <Link href="/Registration">Registration</Link>
