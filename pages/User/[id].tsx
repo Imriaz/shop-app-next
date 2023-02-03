@@ -14,10 +14,25 @@ export const getStaticPaths = async () => {
   };
 };
 
-const UserDetails = () => {
+export const getStaticProps = async (context:any) => {
+    const id = context.params.id;
+
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const data = await res.json();
+
+    return {
+        props: {user: data}
+    }
+}
+
+const UserDetails = ({user}:any) => {
   return (
     <div>
       <h1>User Details Page</h1>
+      <h2>Name: {user.name}</h2>
+      <p>Email: {user.email}</p>
+      <p>Website: {user.website}</p>
+      <p>City: {user.address.city}</p>
     </div>
   );
 };

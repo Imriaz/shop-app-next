@@ -8,13 +8,13 @@ export const getStaticProps = async () => {
     console.log(data);
 
     return {
-props: {User: data}
+props: {Users: data}
     }
 }
 
 
 
-const User = ({User}:any) => {
+const User = ({Users}:any) => {
     return (
         <>
         <Head>
@@ -23,7 +23,7 @@ const User = ({User}:any) => {
       </Head>
         <div>
             <h1>User List</h1>
-            {User?.map((user:any)=>(
+            {Users?.map((user:any)=>(
                 <div key={user.id}>
                     <Link href={`/User/${user.id}`} key={user.id}>
                     <h3>{user.name}</h3></Link>
