@@ -28,7 +28,7 @@ export const getStaticProps = async (context:any) => {
 const UserDetails = ({user}:any) => {
   return (
     <div>
-      <h1>User Details Page</h1>
+      <h1 style={{textAlign:'center'}}>User Details Page</h1>
       <h2>Name: {user.name}</h2>
       <p>Email: {user.email}</p>
       <p>Website: {user.website}</p>
