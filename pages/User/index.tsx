@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 
 export const getStaticProps = async () => {
@@ -24,7 +25,8 @@ const User = ({User}:any) => {
             <h1>User List</h1>
             {User?.map((user:any)=>(
                 <div key={user.id}>
-                    <h3>{user.name}</h3>
+                    <Link href={`/User/${user.id}`} key={user.id}>
+                    <h3>{user.name}</h3></Link>
                 </div>
             ))}
 
