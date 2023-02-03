@@ -22,11 +22,11 @@ const User = ({Users}:any) => {
         <meta name="User list" content="User list page created by create next app" />
       </Head>
         <div>
-            <h1>User List</h1>
+            <h1 style={{textAlign:"center"}}>User List</h1>
             {Users?.map((user:any)=>(
                 <div key={user.id}>
                     <Link href={`/User/${user.id}`} key={user.id}>
-                    <h3>{user.name}</h3></Link>
+                    <h3 style={{background: 'gray', color:'black', width:'25%', padding: '10px', margin: '20px'}}>{user.name}</h3></Link>
                 </div>
             ))}
 
